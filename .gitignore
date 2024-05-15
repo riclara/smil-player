@@ -1,0 +1,12 @@
+/dist/
+/node_modules/
+/coverage/
+/.nyc_output/
+/.idea/
+/cache/
+/src/testing/
+/package-lock.json
+/.npmrc
+/cypress/videos/
+/cypress/screenshots/
+/cypress/testFiles/testing.smil
