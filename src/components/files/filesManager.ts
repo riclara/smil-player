@@ -385,6 +385,8 @@ export class FilesManager implements IFilesManager {
 
 	public fetchLastModified = async (fileSrc: string): Promise<null | string | number> => {
 		try {
+			console.log('@@@@@@@@@@@@@@')
+			console.log(fileSrc)
 			const downloadUrl = createDownloadPath(fileSrc);
 			const authHeaders = window.getAuthHeaders?.(downloadUrl);
 			const promiseRaceArray = [];
@@ -393,6 +395,7 @@ export class FilesManager implements IFilesManager {
 					method: 'HEAD',
 					headers: {
 						...authHeaders,
+						"Access-Control-Allow-Origin": "*",
 						Accept: 'application/json',
 					},
 					mode: 'cors',
